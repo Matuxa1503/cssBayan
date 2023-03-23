@@ -20,78 +20,12 @@ p{width: auto}
 	border-bottom: 1px solid black;
 }
 
-
-
-/* .block__item {
-	margin-top: 50px;
-}
-
-.item {
-	background-color: #fff;
-}
-
-.item__content:hover {
-	background-color: rgb(255, 246, 246);
-}
-
-.item:hover .mem__img {
-	display: block;
-}
-
-.item:hover .plus__icon {
-	display: none;
-}
-
-.item:hover .minus__icon {
-	display: block;
-}
-
-.item {
-	display: flex;
-	justify-content: space-between;
-	padding: 2rem;
-
-	margin-bottom: 2rem;
-	cursor: pointer;
-}
-
-.label__bayan {
-	width: 100%;
-	display: block;
-	cursor: pointer;
-}
-
-.input__bayan {
-	width: 0;
-	height: 0;
-	appearance: none;
-	-webkit-appearance: none;
-}
-
-.input__bayan:checked + .mem__img {
-	display: block;
-}
-
-
-.plus__icon {
-	display: block;
-}
-
-.minus__icon {
-	display: none;
-}
-
-.mem__img {
-	display: none;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 35%;
-	cursor: pointer;
-} */
-
 .accordion__block {
 	margin-top: 50px;
+}
+
+.accordion__block:hover .plus__icon {
+	display: inline-block;
 }
 
 .accordion__item {
@@ -99,12 +33,15 @@ p{width: auto}
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 	margin-bottom: 15px;
 }
 
 .accordion__item:hover .label__img {
 	display: block;
+}
+
+.accordion__item:hover .plus__icon {
+	rotate: 45deg;
 }
 
 .item__input {
@@ -122,10 +59,8 @@ p{width: auto}
 	background-color: greenyellow;
 }
 
-.item__input:hover .item__title i {
-	display: inline-block;
-	transform: rotate(45deg);
-	transition: all 0.5s;
+.item__input:checked ~ .item__title i {
+	rotate: 45deg;
 }
 
 .item__title {
@@ -139,11 +74,6 @@ p{width: auto}
 
 .item__title:hover {
 	background-color: greenyellow;
-}
-
-.accordion__item:hover .plus__icon {
-	display: inline-block;
-	transition: all 0.5s;
 }
 
 .plus__icon {
